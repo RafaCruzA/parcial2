@@ -5,11 +5,18 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<Label>Nombre Categoria</Label>
-	<br>
-	<input type="text"> 
-	<br>
-	<input type="button" value="Guardar categoria">
+
+		<form th:action="@{/validarCategoria}" method="post"
+			th:object="${categoria}">
+			<div class="form-group">
+				<label for="id1">Nombre Categoria</label> <input type="text"
+					class="form-control" id="id1" placeholder="Sci-fi"
+					th:field="*{s_categoria}"><span
+					th:errors="*{s_categoria}" style="color: #ae3232;"></span><br>
+			</div>
+			<input class="btn btn-primary" type="submit" value="Guardar categor&iacute;a">
+		</form>
+            
 
 </body>
 </html>

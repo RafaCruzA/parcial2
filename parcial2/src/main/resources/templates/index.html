@@ -5,10 +5,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-	<input type="button" value="Ingresar categoria">
-	<input type="button" value="Ingresar libro">
-	<input type="button" value="Ver libros">
-
+<div class="container">
+		<div>
+			<input type="button" onclick="window.location.href='/ingresarCategoria'">Ingresar
+				Categoria</button>
+			<button type="button" onclick="window.location.href='/ingresarLibro'">Ingresar
+				Libro</button>
+			<button type="button" class="btn btn-primary mx-1"
+				onclick="window.location.href='/verLibros'">Ver Libros</button>
+		</div>
+		<div >
+			<h1 th:if="${condition == 1}">Categoria guardada con
+				exito</h1>
+			<h1 th:if="${condition == 2}">Libro guardado con exito</h1>
+		</div>
+	</div>
 </body>
 </html>
